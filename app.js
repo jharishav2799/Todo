@@ -84,7 +84,7 @@ app.post('/add', (req, res) => {
         console.log('saves success. Doc ID = ', doc._id);
         let documentId = doc._id;
         task = cron.schedule(
-          `*/${minutes} */${hours} * * * `,
+          `0 */${minutes} */${hours} * * *`,
           () => {
             let currentDate = new Date(Date.now());
             const futureDate = {
@@ -118,7 +118,7 @@ app.post('/add', (req, res) => {
   }
 });
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8001;
 
 app.listen(port, () => {
   console.log(`SERVER IS RUNNING TO PORT ${port}`);
