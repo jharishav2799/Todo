@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+    <link  rel="stylesheet" type="text/css" href="/stylesheet/app.css">
+</head>
+<body>
+    <div class="ui main text container">
+        <div class="ui huge header">TODO'S LIST</div>
+        <form action="/add" method="GET">
+            <button class="ui blue basic button">ADD TODO</button>
+        </form>
+           <div class="ui top attached segment">
+               <div class="ui divided items">
+                  <% todos.forEach(function(todo){ %>
+                       <div class="item">
+                       <div class="content">
+                           <a > <%= todo.todoName %></a><br>
+                          
+                            <div class="description">
+                                        <p><%= todo.todoDescription%></p>  <br>
+                            </div>
+                            <div class="created">
+                                <p>Created By:<%= todo.name%></p>  
+                            </div>
+                            <div class="meta">
+                                <span>Duration:<%= todo.duration %> min</span>  
+                            </div>
+                
+                       </div>
+                    </div>
+                 <% }) %>
+                </div>  
+            </div>
+          
+        </div>
+</body>
+</html>
+
+
+<!-- <div>
+    <h2>TODO</h2><br>
+         <table>
+             <tr>
+             <th>TODO NAME</th>
+             <th>TODO DESCRIPTION</th>
+             <th>CREATOR</th>
+             <th>Duration</th>
+             <th>Created </th>
+            </tr>
+           
+         <% todos.forEach(function(todo){ %>
+            <tr>
+             <td><%=todo.todoName%></td>
+             <td><%= todo.todoDescription%></td>
+             <td> <%=todo.name %></td>
+             <td> <%=todo.duration %></td>
+             <td><%= todo._id.getTimestamp()%></td>
+            </tr>
+            <% }) %>
+       
+         </table>
+</div> -->

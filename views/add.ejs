@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+</head>
+<body>
+    <div class="ui main text container segment">
+        <div class="ui huge header">New Todo</div>
+        
+        <form class="ui form" action="/add" method="POST">
+             <div class="field">
+                 <label>Title</label>
+                 <input type="text"  name="todoName">
+              </div>
+              <div class="field">
+                  <label>Description</label>
+                  <input type="text"  name="todoDescription">
+              </div>
+              <div class="field">
+                  <label>Creator Name</label>
+                  <input type="text"  name="name">
+              </div>
+              <div class="field">
+                <label>Duration</label>
+                <input type="number"  name="duration">
+             </div>
+              <input class="ui green big basic button" type="submit">
+        </form>
+    </div>
+</body>
+</html>
+<!-- <form action="/add" method="POST">
+    <label for="todoName">Title:</label>
+    <input type="text"  name="todoName"><br><br>
+    <label for="todoDescription">Description</label>
+    <input type="text"  name="todoDescription"><br><br>
+    <label for="name">Creator Name</label>
+    <input type="text"  name="name"><br><br>
+    <label for="duration">Duration(In min)</label>
+    <input type="number"  name="duration"><br><br>
+    <input type="submit" value="Submit">
+</form> -->
